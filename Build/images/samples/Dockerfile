@@ -42,7 +42,7 @@ RUN apt-get -y update && \
 # installed. It tends to be more stable to use the .NET Core SDK to do so than
 # to use the Debian package manager, due to issues with syncing libicu
 # dependencies.
-RUN dotnet tool install --global PowerShell --version 7.2.1
+RUN dotnet tool install --global PowerShell --version 7.2.2
 
 # Install Jupytext to expose Markdown files as Jupyter Notebooks for use with
 # Binder.
@@ -78,3 +78,4 @@ RUN chown -R ${USER}:${USER} /home/${USER}/.azure
 #     Dockerfile in the root of the repo. This means that the devcontainer
 #     runs as root in VS Code and GitHub Codespaces, as is the default for
 #     both environments.
+#
